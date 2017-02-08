@@ -8,6 +8,12 @@ gem 'json'
 gem 'econfig'
 
 gem 'sequel'
+gem 'roar'
+gem 'multi_json'
+gem 'dry-monads'
+gem 'dry-container'
+gem 'dry-transaction'
+gem 'shoryuken'
 
 group :development, :test do
   gem 'sqlite3'

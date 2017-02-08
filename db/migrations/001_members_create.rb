@@ -13,6 +13,7 @@ Sequel.migration do
       String :money
       String :level
       String :time_join
+      String :time_operate
       
     end
   end
