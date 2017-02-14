@@ -2,6 +2,13 @@
 
 #  FuturesDB service
 class FuturesDB < Sinatra::Base
+  # Find all members
+  get "/#{API_VER}/member/?" do
+    results = FindMembers.call
+
+    MembersRepresenter.new(results.value).to_json
+  end    
+
   # Get the member's information by phone and email
   get "/#{API_VER}/member/:phone/:email/?" do
     result = MemberInfo.call(params)

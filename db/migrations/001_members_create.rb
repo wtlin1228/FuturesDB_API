@@ -11,7 +11,8 @@ Sequel.migration do
       String :location
       String :work
       String :money
-      String :level
+      String :current_level
+      String :expect_level
       String :time_join
       String :time_operate
       

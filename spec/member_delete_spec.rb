@@ -12,7 +12,8 @@ describe 'Test delete member' do
       "location": "新竹",
       "work": "學生",
       "money": "0",
-      "level": "基本",
+      "current_level": "0",
+      "expect_level": "10",
       "time_join": "20170101",
       "time_operate": "20170101" 
     }.to_json,

@@ -12,7 +12,8 @@ describe 'Test create member' do
       "location": "新竹",
       "work": "學生",
       "money": "0",
-      "level": "基本",
+      "current_level": "0",
+      "expect_level": "10",
       "time_join": "20170101",
       "time_operate": "20170101" 
     }.to_json,
@@ -32,7 +33,8 @@ describe 'Test create member' do
     member['location'].must_equal "新竹"
     member['work'].must_equal "學生"
     member['money'].must_equal "0"
-    member['level'].must_equal "基本"
+    member['current_level'].must_equal "0"
+    member['expect_level'].must_equal "10"
     member['time_join'].must_equal "20170101"
     member['time_operate'].must_equal "20170101"
   end

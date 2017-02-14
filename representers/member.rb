@@ -10,7 +10,8 @@ class MemberRepresenter < Roar::Decorator
   property :location
   property :work
   property :money
-  property :level
+  property :current_level
+  property :expect_level
   property :time_join
   property :time_operate
 end

@@ -23,7 +23,7 @@ class MemberCreate
   }
 
   register :check_if_already_exist, lambda { |data|
-    if nil == Member.find(phone=data[:phone])
+    if nil == Member.find(phone: data[:phone])
       Right(data)
     else
       Left(Error.new(:bad_request, 'This member already exits'))
@@ -38,7 +38,8 @@ class MemberCreate
                location: data[:location],
                work: data[:work],
                money: data[:money],
-               level: data[:level],
+               current_level: data[:current_level],
+               expect_level: data[:expect_level],
                time_join: data[:time_join],
                time_operate: data[:time_operate]   
             )

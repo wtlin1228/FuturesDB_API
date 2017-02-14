@@ -23,7 +23,7 @@ class MemberDelete
   }
 
   register :check_if_already_exist, lambda { |data|
-    if nil == Member.find(phone=data[:phone])
+    if nil == Member.find(phone: data[:phone])
       Left(Error.new(:bad_request, 'This member dose not exits'))
     else
       Right(data)

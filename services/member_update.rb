@@ -23,7 +23,7 @@ class MemberUpdate
   }
 
   register :check_if_exist, lambda { |data|
-    if nil == Member.find(phone=data[:phone])
+    if nil == Member.find(phone: data[:phone])
       Left(Error.new(:bad_request, 'This member does not exits'))
     else
       Right(data)
@@ -40,7 +40,8 @@ class MemberUpdate
       member.location = data[:location]
       member.work = data[:work]
       member.money = data[:money]
-      member.level = data[:level]
+      member.current_level = data[:current_level]
+      member.expect_level = data[:expect_level]
       member.time_join = data[:time_join]
       member.time_operate = data[:time_operate]
       member.save
